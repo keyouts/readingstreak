@@ -4,18 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reading Streak</title>
-      <link rel="stylesheet" href="./style.css"></head>
+  <link rel="stylesheet" href="./style.css">
+</head>
 <body>
-  <div class="widget">
-    <h1>Reading Streak</h1>
-    <div class="streak" id="streakCount">0</div>
-    <button onclick="incrementStreak()">+1 Day</button>
-    <button onclick="resetStreak()" style="margin-top: 1rem;">Reset</button>
+  <div class="widget" role="region" aria-labelledby="streakHeading">
+    <h1 id="streakHeading">Reading Streak</h1>
+    
+    <div class="streak" id="streakCount" role="status" aria-live="polite" aria-label="Current reading streak">
+      0
+    </div>
+    
+    <button onclick="incrementStreak()" aria-label="Add one day to reading streak">+1 Day</button>
+    <button onclick="resetStreak()" style="margin-top: 1rem;" aria-label="Reset reading streak to zero">Reset</button>
   </div>
 
-<script src="./script.js"></script>
-
-
+  <script src="./script.js"></script>
 </body>
 </html>
 
